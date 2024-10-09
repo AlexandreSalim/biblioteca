@@ -1,0 +1,17 @@
+    p, h1{margin: 0;}
+    
+    .open{
+        width: 340px;
+        height: 100%;
+        position: fixed;
+        background-color: antiquewhite;
+        transition: all 0.5s linear;
+        opacity: 1;
+
+    }
+
+    .close{
+        transform: translateX(-100%);
+        transition: all 0.5s linear;
+        opacity: 0.5;
+    }

@@ -1,0 +1,30 @@
+<header class="w-full h-10">
+    <nav class="flex items-center justify-between p-2">
+        <div class="flex items-center justify-between"><mat-icon (click)="toggleSidebar()">menu</mat-icon></div>
+        <div class="flex items-center justify-end gap-3">
+            <P routerLink="/versoes" class="cursor-pointer">NTLH</P>
+            <mat-icon class="cursor-pointer">volume_up</mat-icon>
+            <mat-icon (click)="openDialog('0ms', '0ms')" class="cursor-pointer">format_size</mat-icon>
+            <mat-icon class="cursor-pointer">more_vert</mat-icon>
+        </div>
+    </nav>
+
+
+    <div [ngClass]="{'open': !open, 'close': open}">
+        <div class="p-2">
+            <div class="flex items-center justify-between mb-2">
+                <h1 class="font-black">menu</h1>
+                <mat-icon (click)="toggleSidebar()">close</mat-icon>
+            </div>
+            <div class="grid gap-2">
+                <a class="text-xl font-bold cursor-pointer">opções de click</a>
+                <a class="text-xl font-bold cursor-pointer">opções de click</a>
+                <a class="text-xl font-bold cursor-pointer">opções de click</a>
+                <a class="text-xl font-bold cursor-pointer">opções de click</a>
+                <a class="text-xl font-bold cursor-pointer">opções de click</a>
+                <a class="text-xl font-bold cursor-pointer">opções de click</a>
+            </div>
+        </div>
+    </div>
+</header>
+

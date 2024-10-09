@@ -1,0 +1,9 @@
+<div class="pl-3 h-full" [ngStyle]="{'font-size.px': tamanhoFonte}">
+
+    <p *ngFor="let versaoObj of arrayVersao" 
+    [ngClass]="{'color': versao === versaoObj.id}" 
+    (click)="selecionarVersao(versaoObj.id)">
+   {{versaoObj.versoes}}
+ </p>
+
+</div>

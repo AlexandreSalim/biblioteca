@@ -1,0 +1,46 @@
+<div class="bg-black text-white">
+
+    <div class="mt-2 mx-4">
+        
+        <p class="p uppercase">Tamanho da fonte:</p>
+
+        <mat-slider min="10" max="50" step="1" (input)="onInputChange($event)" thumbLabel>
+            <input matSliderThumb>
+        </mat-slider>
+        
+        <span class="ml-4">{{ tamanhoFonte }}px</span>
+    
+    </div>
+
+
+    <mat-divider class="divisor"></mat-divider>
+
+    <div class="mt-2 mx-4">
+        <p class="uppercase">tipo de fontes:</p>
+        <div class="grid grid-cols-2 place-items-start">
+            <p [ngClass]="{'color': p === 1}" (click)="selecionarP(1)">normal</p>
+            <p [ngClass]="{'color': p === 2}" (click)="selecionarP(2)">monospace</p>
+            <p [ngClass]="{'color': p === 3}" (click)="selecionarP(3)">sans_serif</p>
+            <p [ngClass]="{'color': p === 4}" (click)="selecionarP(4)">serif</p>
+        </div>
+    </div>
+
+    <mat-divider class="divisor"></mat-divider>
+
+    <div class="flex justify-between items-center my-2 mx-4">
+        <p class="uppercase p">modo Noturno:</p>
+
+        <div class="container">
+            <input type="checkbox" name="checkbox" id="checkbox" (change)="toggleModoNoturno($event)" />
+            <label for="checkbox" class="label"> </label>
+        </div>
+
+    </div>
+
+    <mat-divider class="divisor"></mat-divider>
+
+    <div class="flex gap-10 items-center justify-center mt-2 uppercase">
+        <p [ngClass]="{'color': sc === 1}" (click)="salvarOUcancelar(1)">cancelar</p>
+        <p [ngClass]="{'color': sc === 2}" (click)="salvarOUcancelar(2)">salvar</p>
+    </div>
+</div>
